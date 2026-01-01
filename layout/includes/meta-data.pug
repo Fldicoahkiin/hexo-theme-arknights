@@ -16,14 +16,17 @@ style.
   @font-face {
     font-family: Bender;
     src: local('Bender'), url("#{config.root}font/Bender.ttf"), url("#{config.root}font/Bender.otf");
+    font-display: swap;
   }
   @font-face {
     font-family: BenderLight;
     src: local('BenderLight'), url("#{config.root}font/BenderLight.woff2") format('woff2');
+    font-display: swap;
   }
   @font-face {
     font-family: 'JetBrains Mono';
     src: local('JetBrains Mono'), url('#{config.root}font/JetBrainsMono-Regular.woff2') format('woff2');
+    font-display: swap;
   }
 
 meta(name="page-config" content=JSON.stringify({ code_fold: page.code_fold || null }))
