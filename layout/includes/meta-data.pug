@@ -1,7 +1,13 @@
 meta(charset='UTF-8')
 meta(name='viewport' content='width=device-width, initial-scale=1.0')
+if page.tags && page.tags.length
+  meta(name="keywords" content=page.tags.map(tag => tag.name).join(','))
+else if config.keywords
+  meta(name="keywords" content=config.keywords.join(','))
 != open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id})
 title= pageTitle
+if theme.aside.logo
+  link(rel="preload" as="image" href=url_for(theme.aside.logo))
 
 link(rel="preconnect" href="//unpkg.com")
 link(rel="preconnect" href="//cdnjs.cloudflare.com")
