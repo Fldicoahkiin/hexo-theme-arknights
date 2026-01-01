@@ -3,6 +3,8 @@ meta(name='viewport' content='width=device-width, initial-scale=1.0')
 != open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id})
 title= pageTitle
 
+link(rel="preconnect" href="//unpkg.com")
+link(rel="preconnect" href="//cdnjs.cloudflare.com")
 link(
   rel="icon"
   type=(theme.favicon.type ? theme.favicon.type : "image/x-icon")
