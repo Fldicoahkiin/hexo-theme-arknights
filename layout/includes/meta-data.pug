@@ -1,5 +1,6 @@
 meta(charset='UTF-8')
 meta(name='viewport' content='width=device-width, initial-scale=1.0')
+!= open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id})
 title= pageTitle
 
 link(
@@ -56,9 +57,9 @@ if theme.artalk && theme.artalk.enable === true
   link(type="text/css" rel="stylesheet" href="//unpkg.com/artalk@2.8.4/dist/Artalk.css")
   script(async src="//unpkg.com/artalk@2.8.4/dist/Artalk.js")
 if theme.mermaid && theme.mermaid.enable === true && theme.mermaid.version
-  script(src= "//unpkg.com/mermaid@" + theme.mermaid.version + "/dist/mermaid.min.js")
+  script(defer src= "//unpkg.com/mermaid@" + theme.mermaid.version + "/dist/mermaid.min.js")
 if theme.mathjax && theme.mathjax.enable === true
-  script(src="//cdnjs.cloudflare.com/ajax/libs/mathjax/" + theme.mathjax.version + "/MathJax.js")
+  script(defer src="//cdnjs.cloudflare.com/ajax/libs/mathjax/" + theme.mathjax.version + "/MathJax.js")
   script
     |MathJax.Hub.Config({
     |  menuSettings: {
